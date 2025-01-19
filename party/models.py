@@ -12,7 +12,7 @@ class CustomUser(AbstractUser):
 class Party(models.Model):
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4)
     party_date = models.DateField()
-    party_time = models.DateTimeField()
+    party_time = models.TimeField()
     invitation = models.TextField()
     venue = models.CharField(max_length=200)
     organizer = models.ForeignKey(

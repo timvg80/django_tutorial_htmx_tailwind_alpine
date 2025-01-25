@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Party!</title>
     <script type="text/javascript" src="{% static '/party/js/htmx.min.js' %}"></script>
-    <script type="text/javascript" src="{% static '/party/js/alpine.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/party/js/alpine.min.js' defer %}"></script>
     <link rel="stylesheet" href="{% static '/party/css/tailwind_output.css' %}">
 </head>
-<body class="bg-custom-powder-light">
+<body class="bg-custom-powder-light" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
     <nav class="bg-custom-red">
         <a href="/" class="inline-block p-4 text-custom-powder-light font-dancing-script text-2xl">
             My Parties
